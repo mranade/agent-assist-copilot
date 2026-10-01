@@ -1,0 +1,20 @@
+{
+  // The setup task creates .venv in the project root; VS Code's Python
+  // extension picks it up automatically. If it asks, choose ".venv".
+  "python.terminal.activateEnvironment": true,
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.analysis.extraPaths": ["${workspaceFolder}/src"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": ["tests"],
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true
+  },
+  "search.exclude": {
+    "web/node_modules": true,
+    "web/dist": true,
+    "data/calls/audio": true
+  }
+}

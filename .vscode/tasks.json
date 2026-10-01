@@ -1,0 +1,74 @@
+{
+  // Terminal > Run Task... to use these.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set up project",
+      "detail": "First run: creates .venv, installs Python and UI dependencies, builds the UI",
+      "type": "shell",
+      "command": "./scripts/setup.sh",
+      "windows": {
+        "command": "powershell",
+        "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\scripts\\setup.ps1"]
+      },
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Build UI",
+      "detail": "Rebuilds the React UI into web/dist (runs automatically before F5)",
+      "type": "shell",
+      "command": "npm run build",
+      "options": { "cwd": "${workspaceFolder}/web" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "silent", "panel": "shared" }
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": ".venv/bin/python -m pytest -q",
+      "windows": { "command": ".venv\\Scripts\\python.exe -m pytest -q" },
+      "options": { "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run evaluation",
+      "type": "shell",
+      "command": ".venv/bin/python scripts/run_eval.py",
+      "windows": { "command": ".venv\\Scripts\\python.exe scripts\\run_eval.py" },
+      "options": { "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+      "problemMatcher": []
+    },
+    {
+      "label": "UI dev server (hot reload)",
+      "detail": "Optional: edit the React UI with live reload on :5173. Start the app with F5 first.",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/web" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Regenerate sample-call audio (natural voices)",
+      "detail": "Installs Piper (offline neural TTS) and rewrites data/calls/audio with natural voices",
+      "type": "shell",
+      "command": ".venv/bin/python -m pip install -e \".[voices]\" && .venv/bin/python scripts/make_call_audio.py --engine piper",
+      "windows": { "command": ".venv\\Scripts\\python.exe -m pip install -e '.[voices]'; .venv\\Scripts\\python.exe scripts\\make_call_audio.py --engine piper" },
+      "options": { "cwd": "${workspaceFolder}", "env": { "PYTHONUTF8": "1" } },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Reset call history",
+      "detail": "Deletes the saved-calls database; it is re-seeded on the next start",
+      "type": "shell",
+      "command": "rm -f data/history/history.db",
+      // Fails loudly if the app is still running (Windows locks the open database). Stop it first.
+      "windows": { "command": "if (Test-Path data\\history\\history.db) { Remove-Item -ErrorAction Stop data\\history\\history.db }" },
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

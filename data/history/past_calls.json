@@ -1,0 +1,71 @@
+[
+  {
+    "id": "past-outage",
+    "days_ago": 6,
+    "agent": "Jordan",
+    "turns": [
+      {"speaker": "agent", "text": "Relay Fiber, this is Jordan. How can I help?"},
+      {"speaker": "customer", "text": "My internet has been completely down since yesterday morning and I work from home. This is ridiculous.", "feedback": "helpful"},
+      {"speaker": "agent", "text": "I'm sorry, let me check the outage map for your area."},
+      {"speaker": "customer", "text": "Nobody told me anything. Is there an outage in my area or not?"},
+      {"speaker": "agent", "text": "Yes, there's a fiber cut nearby. The estimated restore time is tonight at 9 pm."},
+      {"speaker": "customer", "text": "That's two days without service. I want a credit for this outage.", "feedback": "helpful"},
+      {"speaker": "agent", "text": "Outages over 24 hours get an automatic credit on your next bill."},
+      {"speaker": "customer", "text": "This is unacceptable. I want to talk to a supervisor.", "feedback": "not_helpful"}
+    ]
+  },
+  {
+    "id": "past-student",
+    "days_ago": 5,
+    "agent": "Jordan",
+    "turns": [
+      {"speaker": "agent", "text": "Thanks for calling Relay Fiber, this is Jordan."},
+      {"speaker": "customer", "text": "Do you offer a student discount? My son starts college in the fall.", "feedback": "not_helpful"},
+      {"speaker": "agent", "text": "We don't have a student discount, but autopay and paperless billing take five dollars off each month."},
+      {"speaker": "customer", "text": "Okay. Is there a discount if I set up autopay instead?", "feedback": "helpful"},
+      {"speaker": "agent", "text": "Yes, five dollars a month once autopay and paperless are both on. I can set that up now."},
+      {"speaker": "customer", "text": "Sure, let's do that. Thank you."}
+    ]
+  },
+  {
+    "id": "past-upgrade",
+    "days_ago": 4,
+    "agent": "Priya",
+    "turns": [
+      {"speaker": "agent", "text": "Thanks for calling Relay Fiber, this is Priya."},
+      {"speaker": "customer", "text": "Hi, I'd like to upgrade to the 1 Gig plan.", "feedback": "helpful"},
+      {"speaker": "agent", "text": "Happy to help with that."},
+      {"speaker": "customer", "text": "Does it cost anything to switch plans, and when does it start?", "feedback": "helpful"},
+      {"speaker": "agent", "text": "There's no change fee, and upgrades take effect right away."},
+      {"speaker": "customer", "text": "Perfect, that's great. Thanks for making it so easy."}
+    ]
+  },
+  {
+    "id": "past-bundle",
+    "days_ago": 3,
+    "agent": "Marco",
+    "turns": [
+      {"speaker": "agent", "text": "Relay Fiber, this is Marco. What can I do for you?"},
+      {"speaker": "customer", "text": "Do you have a streaming bundle, like TV channels with the internet?"},
+      {"speaker": "agent", "text": "We only sell internet, so there's no TV or streaming package. I can see if a different plan would save you money."},
+      {"speaker": "customer", "text": "Sure. What plans do you have and how much are they?", "feedback": "not_helpful"},
+      {"speaker": "agent", "text": "There's 300 Meg, 1 Gig, and 2 Gig. Most people are happy on 300 Meg."},
+      {"speaker": "customer", "text": "Okay, I'll think about it. Thanks anyway."}
+    ]
+  },
+  {
+    "id": "past-technician",
+    "days_ago": 2,
+    "agent": "Sam",
+    "turns": [
+      {"speaker": "agent", "text": "Relay Fiber, this is Sam."},
+      {"speaker": "customer", "text": "My speeds are really slow, even on my computer that's plugged in with a cable.", "feedback": "helpful"},
+      {"speaker": "agent", "text": "Let's run a wired speed test together."},
+      {"speaker": "customer", "text": "I ran the test with the cable and I'm getting about half my plan speed."},
+      {"speaker": "agent", "text": "That points to the line. I'd like to send a technician."},
+      {"speaker": "customer", "text": "Can a technician come out to look at it? Is there a fee for the visit?", "feedback": "helpful"},
+      {"speaker": "agent", "text": "No charge if the problem is our line. The earliest window is Thursday, 10 to 12."},
+      {"speaker": "customer", "text": "Okay, Thursday morning works. I appreciate the help."}
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "call-01",
+    "title": "Evening drops and a credit request",
+    "description": "A customer's Wi-Fi keeps cutting out at night. The agent works through the checklist, books a technician, and applies a credit.",
+    "turns": [
+      {"speaker": "agent", "text": "Thanks for calling Relay Fiber, this is Sam. Who do I have the pleasure of speaking with?"},
+      {"speaker": "customer", "text": "Hi Sam, it's Dana Ortiz.", "expected_kb": null},
+      {"speaker": "agent", "text": "Hi Dana, what can I help you with today?"},
+      {"speaker": "customer", "text": "My internet keeps dropping every night, like it cuts out for a minute or two around eight or nine pm, and my laptop loses the Wi-Fi.", "expected_kb": ["KB-101"]},
+      {"speaker": "agent", "text": "I'm sorry about that. Let me run a line check on your account. Okay, the line check confirms your gateway has been disconnecting in the evenings, but there are no line errors right now. Does it drop on wired devices too, like a computer plugged in with a cable, or only on Wi-Fi?"},
+      {"speaker": "customer", "text": "Only on Wi-Fi. None of my devices are wired, and I'm in an apartment building if that matters.", "expected_kb": ["KB-101"]},
+      {"speaker": "agent", "text": "That helps. Apartment buildings get a lot of interference on the older band. Let's switch your laptop to the five gigahertz network, the one whose name ends in dash five G, and move the gateway off the floor and away from the microwave."},
+      {"speaker": "customer", "text": "Okay, my laptop is on the five gigahertz network now, and I moved the gateway up onto a shelf.", "expected_kb": ["KB-101"]},
+      {"speaker": "agent", "text": "Perfect. Now let's power-cycle the gateway. Unplug it, wait thirty seconds, and plug it back in. I'll confirm the firmware updates automatically when it comes back."},
+      {"speaker": "customer", "text": "It's back on. But honestly, I've restarted it a bunch of times this week and the internet still drops every night.", "expected_kb": ["KB-101"]},
+      {"speaker": "agent", "text": "Since the drops keep continuing even after these steps, I'd like to schedule a technician visit to check your line and gateway in person."},
+      {"speaker": "customer", "text": "Will I have to pay a fee for the technician visit?", "expected_kb": ["KB-115"]},
+      {"speaker": "agent", "text": "There's no charge if the problem is with our line or equipment. If the technician finds it's your own inside wiring or personal devices, there's a seventy-five dollar trip fee. I have a window on Thursday between ten and noon. Does that work?"},
+      {"speaker": "customer", "text": "Yes, Thursday works. And since this has been going on for over a week, can I get some kind of credit on my bill for all the drops?", "expected_kb": ["KB-109"]},
+      {"speaker": "agent", "text": "Absolutely. Since the line check confirmed the drops, I've applied a one-time goodwill credit of twenty dollars. You'll see it on your next bill."},
+      {"speaker": "customer", "text": "That's great, thank you so much. I really appreciate you sorting this out.", "expected_kb": null},
+      {"speaker": "agent", "text": "You're welcome, Dana. You'll get a text thirty minutes before the technician arrives on Thursday. Have a good evening."}
+    ]
+  },
+  {
+    "id": "call-02",
+    "title": "Late fee and autopay",
+    "description": "A customer was charged a late fee and wants it removed, then asks why the bill is higher and sets up autopay.",
+    "turns": [
+      {"speaker": "agent", "text": "Relay Fiber, this is Priya. How can I help?"},
+      {"speaker": "customer", "text": "Hi, I got charged a ten dollar late fee this month and I'd like it waived. I just forgot to pay on time.", "expected_kb": ["KB-108"]},
+      {"speaker": "agent", "text": "I can help with that. First I need to verify your account. Can I get the last four digits of your account number and your PIN?"},
+      {"speaker": "customer", "text": "Sure, it's 4821 and my PIN is 7090.", "expected_kb": ["KB-117", "KB-108"]},
+      {"speaker": "agent", "text": "Thanks, you're verified. I'm checking the waiver history on the account now, and you haven't had a waiver in the last twelve months."},
+      {"speaker": "customer", "text": "Oh good. Also, my bill looked higher than usual this month. Why is that?", "expected_kb": ["KB-107"]},
+      {"speaker": "agent", "text": "Good news first: I've waived the late fee. As for the higher bill, I see you changed plans partway through last month."},
+      {"speaker": "customer", "text": "Right, I upgraded to the faster plan in the middle of the month. Is that why the bill went up?", "expected_kb": ["KB-107", "KB-111"]},
+      {"speaker": "agent", "text": "Exactly. When you change plans partway through a billing cycle, the next bill includes a prorated charge for the partial month. Let me walk you through the prorated charges section line by line."},
+      {"speaker": "customer", "text": "Okay, that makes sense now.", "expected_kb": null},
+      {"speaker": "agent", "text": "That's right. And so a payment isn't missed again, would you like me to set up autopay for you?"},
+      {"speaker": "customer", "text": "Yes please. Is there any discount for autopay?", "expected_kb": ["KB-116"]},
+      {"speaker": "agent", "text": "There is. If you enroll in autopay with a bank account and paperless billing, you get five dollars off per month, starting with your next full billing cycle. Autopay with a credit card works too, but it doesn't get the discount."},
+      {"speaker": "customer", "text": "I'll use my bank account and go paperless then.", "expected_kb": ["KB-116"]},
+      {"speaker": "agent", "text": "Done. Autopay and paperless billing are set up with your bank account, and the late fee is waived. Is there anything else I can help with?"},
+      {"speaker": "customer", "text": "No, that's everything. Thanks Priya, you've been really helpful.", "expected_kb": null},
+      {"speaker": "agent", "text": "My pleasure. Have a great day."}
+    ]
+  },
+  {
+    "id": "call-03",
+    "title": "Moving, cancelling, and an out-of-scope question",
+    "description": "A customer is moving and thinking about cancelling, asks about something Relay doesn't offer, and decides to cancel.",
+    "turns": [
+      {"speaker": "agent", "text": "Thanks for calling Relay Fiber, this is Marco. How can I help you today?"},
+      {"speaker": "customer", "text": "Hey, I'm moving to a new apartment next month and I want to know if I can take my internet service with me.", "expected_kb": ["KB-112"]},
+      {"speaker": "agent", "text": "Congratulations on the move. What's the new address? I'll check availability with the address lookup."},
+      {"speaker": "customer", "text": "It's 55 Harbor Street, over on the east side.", "expected_kb": null},
+      {"speaker": "agent", "text": "Good news, we're available on Harbor Street. What's your move date? We need at least fourteen days' notice to schedule the installation."},
+      {"speaker": "customer", "text": "The fifteenth. But honestly I'm also thinking about just cancelling because the price is kind of high. I've been with you for about three years.", "expected_kb": ["KB-113"]},
+      {"speaker": "agent", "text": "I'm sorry to hear that. Can I ask why you're thinking of leaving? Is it mainly the price, or have there been problems with the service?"},
+      {"speaker": "customer", "text": "It's mainly the price. The service itself has been fine.", "expected_kb": ["KB-113", "KB-110"]},
+      {"speaker": "agent", "text": "Since you've been with us for more than twelve months, I can offer you twenty percent off your plan for the next three months."},
+      {"speaker": "customer", "text": "Do you guys have a TV and streaming bundle I could add to lower the total cost?", "expected_kb": null, "out_of_scope": true},
+      {"speaker": "agent", "text": "I'm sorry, we don't offer TV or streaming. Relay Fiber is internet only."},
+      {"speaker": "customer", "text": "And if I do cancel, what do I do with the router you gave me?", "expected_kb": ["KB-114", "KB-113"]},
+      {"speaker": "agent", "text": "If you cancel, service ends at the end of your current billing cycle and there's no early termination fee. You'd send the gateway back with a prepaid label."},
+      {"speaker": "customer", "text": "Honestly, twenty percent for three months doesn't really fix it. After that I'm back to paying the same high price. I'm going to cancel.", "expected_kb": ["KB-113"]},
+      {"speaker": "agent", "text": "I understand, and I'm sorry we couldn't make it work. I've processed the cancellation, and I'm emailing you a prepaid return label now."},
+      {"speaker": "customer", "text": "Fine. It's a shame, but the price just doesn't work for me.", "expected_kb": ["KB-113", "KB-110"]},
+      {"speaker": "agent", "text": "Understood. Please return the gateway within thirty days to avoid the unreturned equipment fee. Good luck with the move."}
+    ]
+  }
+]

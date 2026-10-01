@@ -1,0 +1,10 @@
+{
+  "name": "agent-assist-copilot",
+  "private": true,
+  "description": "Convenience scripts so npm works from the project root. The UI itself lives in web/.",
+  "scripts": {
+    "postinstall": "npm --prefix web install --no-audit --no-fund",
+    "build": "npm --prefix web run build",
+    "dev": "npm --prefix web run dev"
+  }
+}

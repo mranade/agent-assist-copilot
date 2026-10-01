@@ -1,0 +1,26 @@
+{"text": "my wifi keeps cutting out for a few seconds at a time", "expected_kb": ["KB-101"]}
+{"text": "the internet is completely down, nothing works at all", "expected_kb": ["KB-102"]}
+{"text": "I'm paying for gig speed but I'm only getting like 200", "expected_kb": ["KB-103", "KB-110"]}
+{"text": "there's a red light on the front of my modem", "expected_kb": ["KB-104"]}
+{"text": "should I unplug the box and plug it back in", "expected_kb": ["KB-105"]}
+{"text": "how do I change my wifi password", "expected_kb": ["KB-106"]}
+{"text": "why is my first bill so much more than the price you quoted me", "expected_kb": ["KB-107"]}
+{"text": "can you take off the late charge, I paid a couple days late", "expected_kb": ["KB-108"]}
+{"text": "we had no service for two days, do I get money back for that", "expected_kb": ["KB-109", "KB-102"]}
+{"text": "what plans do you have and how much are they", "expected_kb": ["KB-110"]}
+{"text": "I want to upgrade to the faster plan", "expected_kb": ["KB-111", "KB-110"]}
+{"text": "I'm relocating to another city, can my service come with me", "expected_kb": ["KB-112"]}
+{"text": "I'd like to cancel my account", "expected_kb": ["KB-113"]}
+{"text": "where do I send back my equipment", "expected_kb": ["KB-114"]}
+{"text": "can someone come out to my house to look at it", "expected_kb": ["KB-115"]}
+{"text": "is there a discount if I sign up for automatic payments", "expected_kb": ["KB-116"]}
+{"text": "do you have a data limit or will I get charged for using too much", "expected_kb": ["KB-118"]}
+{"text": "I need a static IP for my home server", "expected_kb": ["KB-119"]}
+{"text": "I want to talk to a supervisor right now", "expected_kb": ["KB-120"]}
+{"text": "is the tech visit free or do I have to pay for it", "expected_kb": ["KB-115"]}
+{"text": "do you sell home security cameras", "expected_kb": null}
+{"text": "can I add a cell phone line to my account", "expected_kb": null}
+{"text": "what channels come with your cable TV package", "expected_kb": null}
+{"text": "do you offer a student discount", "expected_kb": null}
+{"text": "hi, how are you doing today", "expected_kb": null, "small_talk": true}
+{"text": "okay, perfect, thanks so much", "expected_kb": null, "small_talk": true}

@@ -1,0 +1,59 @@
+{
+  // Press F5 (or Run > Start Debugging) with "Run Agent Assist" selected.
+  // First time only: run the "Set up project" task (Terminal > Run Task).
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Agent Assist",
+      "type": "debugpy",
+      "request": "launch",
+      // Always use the project's own virtual environment (made by the setup task).
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "windows": { "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe" },
+      "module": "assist.server",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "env": { "PYTHONPATH": "${workspaceFolder}/src", "PYTHONUTF8": "1" },
+      "preLaunchTask": "Build UI",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      // Opens the app in your browser as soon as the server is up.
+      "serverReadyAction": {
+        "pattern": "Uvicorn running on (https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Run Agent Assist (no speech-to-text)",
+      "type": "debugpy",
+      "request": "launch",
+      // Always use the project's own virtual environment (made by the setup task).
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "windows": { "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe" },
+      "module": "assist.server",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "env": { "PYTHONPATH": "${workspaceFolder}/src", "PYTHONUTF8": "1", "ASSIST_DISABLE_STT": "1" },
+      "preLaunchTask": "Build UI",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Uvicorn running on (https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Run evaluation",
+      "type": "debugpy",
+      "request": "launch",
+      // Always use the project's own virtual environment (made by the setup task).
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "windows": { "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe" },
+      "program": "${workspaceFolder}/scripts/run_eval.py",
+      "cwd": "${workspaceFolder}",
+      "env": { "PYTHONPATH": "${workspaceFolder}/src", "PYTHONUTF8": "1" },
+      "console": "integratedTerminal"
+    }
+  ]
+}
